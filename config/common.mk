@@ -92,10 +92,6 @@ PRODUCT_COPY_FILES += \
 # Include AOSP audio files
 include vendor/aosp/config/aosp_audio.mk
 
-# Fix Dialer
-PRODUCT_COPY_FILES +=  \
-    vendor/aosp/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
-
 # Include Lineage audio files
 include vendor/aosp/config/lineage_audio.mk
 
@@ -134,13 +130,6 @@ PRODUCT_PACKAGES += \
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
-
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    GContacts \
-    GDeskClock \
-    GDialer \
-    GMessaging
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -186,9 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opa.eligible_device=true
-
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
@@ -223,7 +209,7 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 -include vendor/aosp/config/version.mk
 
 # OpenGApps
-#include vendor/aosp/config/opengapps.mk
+include vendor/aosp/config/opengapps.mk
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
