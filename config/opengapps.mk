@@ -11,8 +11,6 @@ ifndef OPENGAPPS_TYPE
 endif
 ifeq ($(OPENGAPPS_TYPE), ALPHA)
     GAPPS_PRODUCT_PACKAGES += \
-        GoogleContacts \
-        GoogleDialer \
         PrebuiltBugle
 else
     GAPPS_PRODUCT_PACKAGES += \
@@ -20,11 +18,14 @@ else
         CalendarGooglePrebuilt \
         DigitalWellbeing \
         GoogleCalendarSyncAdapter \
-        GoogleContacts \
-        GoogleDialer \
         LatinImeGoogle \
         Photos \
         PrebuiltBugle \
-        PrebuiltDeskClockGoogle \
         PrebuiltGmail
 endif
+
+PRODUCT_COPY_FILES +=  \
+    vendor/aosp/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true

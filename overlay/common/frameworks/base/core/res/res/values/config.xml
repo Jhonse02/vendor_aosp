@@ -84,4 +84,9 @@
          Example: "com.android.wellbeing"
      -->
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
+
+    <string name="config_defaultSms" translatable="false">com.google.android.messaging</string>
+
+    <!-- The name of the package that will hold the dialer role by default. -->
+    <string name="config_defaultDialer" translatable="false">com.google.android.dialer</string>
 </resources>
