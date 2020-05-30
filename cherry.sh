@@ -1,5 +1,5 @@
 # First I'll make cherry-picks to Frameworks/base repo
-BASE=~/home/jhonse/aosp/frameworks/base
+BASE=~/aosp/frameworks/base
 cd $BASE
 git fetch https://github.com/Jhonse02/frameworks_base.git
 git cherry-pick a63e06c70f697bec321777365c3442f150313cd2
@@ -13,7 +13,7 @@ git cherry-pick 7a2a2719ffcf71a370bc601f9b34ffdcaa7eb9a8
 git cherry-pick ce9eed9938aef5097a6873ed863cd1130be97500
 
 # Then, I'll make cherry-picks to vendor/aosp repo
-VENDOR=~/home/jhonse/aosp/vendor/aosp
+VENDOR=~/aosp/vendor/aosp
 cd $VENDOR
 git fetch https://github.com/Jhonse02/vendor_aosp.git
 git cherry-pick eddb46980e120213e97cca80fb4b5ebe185478ce
